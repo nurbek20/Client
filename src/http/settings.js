@@ -4,7 +4,7 @@ const instance = axios.create({
     headers: {
         'Content-Type': 'application/json'
       },
-  baseURL: 'http://localhost:5556/'
+  baseURL: 'https://animated-praline-671c56.netlify.app/'
 })
 
 instance.interceptors.request.use((config) => {
