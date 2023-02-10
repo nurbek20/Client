@@ -12,8 +12,19 @@ const loginServices = (data) => {
 const getMe=()=>{
   return instance.get("api/auth/me")
 }
+
+const createPosts=(data)=>{
+  console.log("PostData>>>", data)
+  return instance.post('posts/add', data)
+}
+const getPost=()=>{
+  return instance.get('posts')
+}
+
 export const authServices = {
   registerServices,
   loginServices,
-  getMe
+  getMe,
+  createPosts,
+  getPost
 }

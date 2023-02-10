@@ -1,4 +1,4 @@
-import { GET_ME, HIDDEN_ERROR, HIDDEN_LOADING, SHOW_ERROR, SHOW_LOADING, LOGOUT } from '../types';
+import { GET_ME, HIDDEN_ERROR, HIDDEN_LOADING, SHOW_ERROR, SHOW_LOADING, LOGOUT,CREATE_POST } from '../types';
 
 export const getMeAction = (user) => {
   return {
@@ -33,5 +33,12 @@ export const hiddenErrorAction = () => {
 export const showErrorAction = () => {
   return {
     type: SHOW_ERROR,
+  }
+}
+
+export const createPost=(data)=>{
+  return{
+    type:CREATE_POST,
+    payload: data
   }
 }
