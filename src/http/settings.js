@@ -4,8 +4,9 @@ const instance = axios.create({
     headers: {
         'Content-Type': 'application/json'
       },
-  baseURL: 'https://animated-praline-671c56.netlify.app/'
+  baseURL: 'http://localhost:5556/'
 })
+// https://animated-praline-671c56.netlify.app/
 
 instance.interceptors.request.use((config) => {
   const token = JSON.parse(localStorage.getItem('userData'));

@@ -21,9 +21,6 @@ function App() {
     <>
       <Header />
       <Container maxWidth="lg">
-        {/* <Post />
-        <Registration />
-        <Login /> */}
         <Routes>
           <Route path='/' element={user.fullName ? <Home /> : <Registration />} />
           <Route exact path='/auth/sign-in' element={user.fullName ? <Navigate to="/" replace /> : <Login />} />
